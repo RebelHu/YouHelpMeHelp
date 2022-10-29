@@ -4,9 +4,16 @@ class Stock(object):
         self.goods = []
 
     def Add(self, product):
+        '''
+        The function to add product into Stock
+        param: the object of product
+        '''
         self.goods.append(product)
 
     def Search(self):
+        '''
+        The function to search product in Stock
+        '''
         name = input('What product do you want to search for?')
         flag = False
         for i in range(len(self.goods)):
@@ -23,6 +30,9 @@ class Stock(object):
             print('There is no such product.')
 
     def ListAll(self):
+        '''
+        The function to list all products in Stock
+        '''
         if len(self.goods) == 0:
             print('There is nothing!')
         else:
@@ -31,12 +41,18 @@ class Stock(object):
                     print('Product:'+ self.goods[i].name + '     Supplier:' + self.goods[i].master)
 
     def UserAdd(self):
+        '''
+        The function let user to add product through the func_Add above
+        '''
         name = input('please enter product:')
         master = input('please enter your name:')
         p = Product(name, master)
         self.Add(p)
 
     def UserDelete(self):
+        '''
+        The function let user to delete the product
+        '''
         print('Please enter the information of product which you want to delete.')
         name = input('please enter your product:')
         master = input('please enter your name:')
