@@ -1,8 +1,12 @@
+#Author[Yohance Hu]
+#update[2022/10/29]
+#The main function python file for the YouHelpMeHelp
 from stock import Stock
 
-s = Stock()
+s = Stock()   #The Stock object 
 print('-' * 20 + 'The Menu' + '-' * 20)
 print('1.Add your product\n2.Delete product\n3.Search for one product\n4.List all the product in stock\n5.Exit')
+#The main function
 while True:
     try:
         info = eval(input('Please select the service you would like：'))
